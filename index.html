@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Browser FPS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="gameCanvas" aria-label="FPS game canvas"></canvas>
+
+  <div id="hud">
+    <div id="health">Health: 100</div>
+    <div id="score">Score: 0</div>
+  </div>
+
+  <div id="crosshair" aria-hidden="true">
+    <span class="line horizontal"></span>
+    <span class="line vertical"></span>
+  </div>
+
+  <div id="message">Click to lock pointer and start</div>
+
+  <div id="gameOver" class="hidden" role="dialog" aria-modal="true">
+    <h1>Game Over</h1>
+    <p id="finalScore">Score: 0</p>
+    <button id="restartButton" type="button">Restart</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

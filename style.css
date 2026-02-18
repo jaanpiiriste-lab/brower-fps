@@ -1,0 +1,136 @@
+﻿:root {
+  --bg: #0d1117;
+  --panel: rgba(8, 12, 18, 0.68);
+  --text: #e8f0ff;
+  --accent: #8ad5ff;
+  --danger: #ff6b6b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+#gameCanvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background: #080b11;
+}
+
+#hud {
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  z-index: 5;
+  padding: 10px 12px;
+  border: 1px solid rgba(138, 213, 255, 0.25);
+  background: var(--panel);
+  border-radius: 8px;
+  backdrop-filter: blur(2px);
+}
+
+#hud div {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+#message {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  z-index: 6;
+  font-size: 14px;
+  padding: 9px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(138, 213, 255, 0.35);
+  background: var(--panel);
+  color: var(--accent);
+}
+
+#crosshair {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 22px;
+  height: 22px;
+  margin-left: -11px;
+  margin-top: -11px;
+  z-index: 7;
+  pointer-events: none;
+}
+
+#crosshair .line {
+  position: absolute;
+  background: #ffffff;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+}
+
+#crosshair .horizontal {
+  top: 10px;
+  left: 4px;
+  width: 14px;
+  height: 2px;
+}
+
+#crosshair .vertical {
+  top: 4px;
+  left: 10px;
+  width: 2px;
+  height: 14px;
+}
+
+#gameOver {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  gap: 10px;
+  background: rgba(6, 8, 12, 0.82);
+  text-align: center;
+}
+
+#gameOver h1 {
+  margin: 0;
+  font-size: 44px;
+  color: var(--danger);
+  letter-spacing: 1px;
+}
+
+#gameOver p {
+  margin: 0;
+  font-size: 20px;
+}
+
+#restartButton {
+  margin-top: 8px;
+  border: none;
+  border-radius: 8px;
+  padding: 11px 20px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--accent);
+  color: #071019;
+}
+
+#restartButton:hover {
+  filter: brightness(1.08);
+}
+
+.hidden {
+  display: none !important;
+}
