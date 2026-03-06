@@ -7,10 +7,20 @@ A simple first-person shooter that runs fully in the browser using only HTML, CS
 - First-person camera with pointer lock mouse look
 - WASD movement with wall collision
 - Jump mechanic with simple gravity
-- Raycast wall rendering (DOOM-style)
-- Enemy spawning and movement toward player
-- Shooting with hit detection and enemy removal
-- Health + score HUD
+- Raycast world with stylized 3D-like shading and post effects
+- In-world 3D props for shop/checkpoint terminals
+- 3D pit geometry (no floating ring markers)
+- 4-gun loadout (Pistol, SMG, Shotgun, Rifle) with hotbar
+- New guns are shop unlocks (start with pistol only)
+- Enemy spawning, patrol movement, enemy gunfire, and dash monster attacks
+- Parkour pit section with real hole-style visuals
+- Casino checkpoint + guarded sentry objective
+- Shop zone for weapon unlocks and utility upgrades
+- 3 playable maps with in-game map cycling
+- Loot drops (ammo, fake cash, med, armor)
+- Health + armor + score + ammo + weapon + objective HUD
+- Minimap for player, enemies, checkpoint, and shop
+- Procedural background music (Web Audio API)
 - Game Over screen with restart button
 - Runs offline with no dependencies
 
@@ -31,6 +41,10 @@ fps-game/
 - `W A S D`: Move
 - `Space`: Jump
 - `Left Mouse Button`: Shoot
+- `1-4` or `Mouse Wheel`: Swap weapons
+- `M`: Switch to next map (resets run on that map)
+- `E`: Interact (checkpoint/shop)
+- Music starts after first click/pointer lock
 
 ## How To Run
 
